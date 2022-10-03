@@ -270,7 +270,7 @@ class ChatActivity : AppCompatActivity() {
 //            }
 //        }
 
-        readMessage(firebaseUser!!.uid, userId!!)
+//        readMessage(firebaseUser!!.uid, userId!!)
 
         binding.imgBack.setOnClickListener {
             finish()
@@ -288,35 +288,35 @@ class ChatActivity : AppCompatActivity() {
 //        reference!!.child("Chat").push().setValue(hashMap)
 //    }
 
-    fun readMessage(myId: String, messageId: String) {
-        val reference: DatabaseReference = FirebaseDatabase.getInstance().getReference("Chat")
-
-        reference.addValueEventListener(object : ValueEventListener {
-
-            override fun onDataChange(snapshot: DataSnapshot) {
-                messageList!!.clear()
-                for (dataSnapShot: DataSnapshot in snapshot.children) {
-                    val message = dataSnapShot.getValue(Message::class.java)
-
-                    if (message!!.myId.equals(myId) && message!!.messageId.equals(messageId) ||
-                        message!!.myId.equals(messageId) && message!!.messageId.equals(myId)
-                    ) {
-                        messageList!!.add(message)
-                    }
-                }
-                val chatAdapter = ChatAdapter(this@ChatActivity, messageList!!,userImage!!,myImage!!,myRoom!!,userRoom!!)
-                binding.llRecycler.adapter = chatAdapter
-
-
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-                Toast.makeText(applicationContext, error.message, Toast.LENGTH_LONG).show()
-            }
-
-        })
-
-    }
+//    fun readMessage(myId: String, messageId: String) {
+//        val reference: DatabaseReference = FirebaseDatabase.getInstance().getReference("Chat")
+//
+//        reference.addValueEventListener(object : ValueEventListener {
+//
+//            override fun onDataChange(snapshot: DataSnapshot) {
+//                messageList!!.clear()
+//                for (dataSnapShot: DataSnapshot in snapshot.children) {
+//                    val message = dataSnapShot.getValue(Message::class.java)
+//
+//                    if (message!!.myId.equals(myId) && message!!.messageId.equals(messageId) ||
+//                        message!!.myId.equals(messageId) && message!!.messageId.equals(myId)
+//                    ) {
+//                        messageList!!.add(message)
+//                    }
+//                }
+//                val chatAdapter = ChatAdapter(this@ChatActivity, messageList!!,userImage!!,myImage!!,myRoom!!,userRoom!!)
+//                binding.llRecycler.adapter = chatAdapter
+//
+//
+//            }
+//
+//            override fun onCancelled(error: DatabaseError) {
+//                Toast.makeText(applicationContext, error.message, Toast.LENGTH_LONG).show()
+//            }
+//
+//        })
+//
+//    }
 
     override fun onResume() {
         super.onResume()
