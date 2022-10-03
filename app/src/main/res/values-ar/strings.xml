@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FirstChatApp</string>
+    <string name="otp_verification">OTP Verification</string>
+    <string name="we_will_send_you_a">We will send you a</string>
+    <string name="verification_code">Verification code</string>
+    <string name="on_this_mobile_number">on this mobile Number...</string>
+    <string name="type_your_phone_number">Type your phone Number</string>
+    <string name="Continue">Continue</string>
+    <string name="enter_the_otp_code_to_verify_your_phone_number">Enter the OTP code to Verify your phone Number</string>
+    <string name="verify">Verify</string>
+    <string name="confirm">Confirm</string>
+    <string name="type_your_name">Type your Name</string>
+    <string name="setup_profile">Setup Profile</string>
+    <string name="plz_set_your_name_and_optional_profile_image">Plz set your name and optional Profile Image</string>
+    <string name="profile_information">Profile Information</string>
+    <string name="contacts">Contacts</string>
+    <string name="profile">Profile</string>
+    <string name="logout">Logout</string>
+    <string name="type_message">Type message</string>
+
+</resources>
